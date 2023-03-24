@@ -112,9 +112,7 @@ class Clever_Point_For_Woocommerce_Public {
 
         if (is_checkout() || is_cart()) {
             wp_enqueue_script($this->plugin_name);
-            if (get_option('clever_point_trigger_method','embed')=="modal") {
-                wp_enqueue_script('micromodal');
-            }
+            wp_enqueue_script('micromodal');
             wp_enqueue_script('cleverpoint-map');
         }
     }
@@ -337,8 +335,8 @@ class Clever_Point_For_Woocommerce_Public {
                 $label.="<br><small>".__('Service cost','clever-point-for-woocommerce').": ".wc_price($amount)."</small>";
             }
         }
-        if ($method->cost + $method->get_shipping_tax()>0) {
-            $label.="<br><small>".__('Shipping cost','clever-point-for-woocommerce').": ".wc_price($method->cost + $method->get_shipping_tax() - (float)$amount)."</small>";
+        if ($method->cost + $method->get_shipping_tax()>=0) {
+            $label.="<br><small>".__('Shipping cost','clever-point-for-woocommerce').": ".wc_price(abs($method->cost + $method->get_shipping_tax() - (float)$amount))."</small>";
         }
         return $label;
     }

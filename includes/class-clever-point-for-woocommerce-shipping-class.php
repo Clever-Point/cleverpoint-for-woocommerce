@@ -151,14 +151,3 @@ function clever_point_for_woocommerce_shipping_class() {
         return $methods;
     }
 }
-
-
-add_filter('webexpert_acs_order_tracking_change_url','webexpert_custom_shipping_url',10,2);
-add_filter('webexpert_couriercenter_order_tracking_change_url','webexpert_custom_shipping_url',10,2);
-add_filter('webexpert_elta_order_tracking_change_url','webexpert_custom_shipping_url',10,2);
-add_filter('webexpert_speedex_order_tracking_change_url','webexpert_custom_shipping_url',10,2);
-add_filter('webexpert_geniki_order_tracking_change_url','webexpert_custom_shipping_url',10,2);
-
-function webexpert_custom_shipping_url($url,$order) {
-    return get_permalink(get_page_by_path('parakolouthhsh-parangelias'))."?order_id={$order->get_id()}&email_or_phone={$order->get_billing_email()}";
-}
