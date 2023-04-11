@@ -22,8 +22,6 @@
 			}, 500);
 		});
 
-
-
 		$( 'form.checkout' ).on( 'change', 'input[name^="shipping_method"]', function() {
 			if (this.value === 'clever_point_shipping_class') {
 				$('.clevermap-container').show();
@@ -34,8 +32,6 @@
 				}
 			}else{
 				$('.clevermap-container').hide();
-				if(typeof MicroModal !== "undefined")
-					MicroModal.close('modal-1');
 			}
 		});
 	});
