@@ -46,9 +46,9 @@ if (get_option('clever_point_test_mode',null)=='yes') {
 
 require plugin_dir_path(__FILE__) . 'includes/update/plugin-update-checker.php';
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-    'https://github.com/Clever-Point/clever-point-for-woocommerce',
+    'https://github.com/Clever-Point/cleverpoint-for-woocommerce',
     __FILE__,
-    'clever-point-for-woocommerce'
+    'cleverpoint-for-woocommerce'
 );
 $myUpdateChecker->setBranch('main');
 
