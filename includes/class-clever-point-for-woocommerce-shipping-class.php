@@ -68,12 +68,12 @@ function clever_point_for_woocommerce_shipping_class() {
 
                 if ($weight<=2) {
                     $cost = $this->cost_up_to_2kg;
-                    if ($total>$this->cost_for_free) {
+                    if ($this->cost_for_free>0 && $total>$this->cost_for_free) {
                         $cost=0;
                     }
                 }else {
                     $cost = $this->cost_up_to_2kg + ($this->cost_for_extra_kgs * ceil($weight-2));
-                    if ($total>$this->cost_for_free) {
+                    if ($this->cost_for_free>0 && $total>$this->cost_for_free) {
                         $cost-=$this->cost_up_to_2kg;
                     }
                 }

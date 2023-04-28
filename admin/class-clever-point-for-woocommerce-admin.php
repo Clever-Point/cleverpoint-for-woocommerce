@@ -107,7 +107,7 @@ class Clever_Point_For_Woocommerce_Admin {
         $order = wc_get_order($post->ID);
         $shipping_methods=$order->get_shipping_methods();
         $shipping_method = array_shift($shipping_methods);
-        $shipping_method_id = $shipping_method['method_id'];
+        $shipping_method_id = $shipping_method['method_id'] ?? '';
 
         if ($shipping_method_id!=='clever_point_shipping_class') {
             return;

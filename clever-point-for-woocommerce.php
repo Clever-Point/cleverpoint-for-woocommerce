@@ -16,7 +16,7 @@
  * Plugin Name:       Clever Point for WooCommerce
  * Plugin URI:        https://cleverpoint.gr/woocommerce
  * Description:       Add Clever Point to your checkout and give the option to your customers to select and pick up their parcels from a convenient store near them.
- * Version:           1.0.5
+ * Version:           1.0.6
  * Author:            Clever Point
  * Author URI:        https://cleverpoint.gr/
  * License:           GPL-2.0+
@@ -24,7 +24,7 @@
  * Text Domain:       clever-point-for-woocommerce
  * Domain Path:       /languages
  * WC requires at least: 3.0
- * WC tested up to: 7.5.1
+ * WC tested up to: 7.6.1
  */
 
 // If this file is called directly, abort.
@@ -37,7 +37,7 @@ if ( ! defined( 'WPINC' ) ) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'CLEVER_POINT_FOR_WOOCOMMERCE_VERSION', '1.0.5' );
+define( 'CLEVER_POINT_FOR_WOOCOMMERCE_VERSION', '1.0.6' );
 if (get_option('clever_point_test_mode',null)=='yes') {
     define('CLEVER_POINT_API_ENDPOINT','https://test.cleverpoint.gr/api/v1');
 }else {
