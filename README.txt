@@ -2,8 +2,8 @@
 Donate link: https://cleverpoint.gr/
 Tags: clever point, shipping
 Requires at least: 4.0.0
-Tested up to: 6.2
-Stable tag: 1.0.6
+Tested up to: 6.2.2
+Stable tag: 1.0.7
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -71,6 +71,9 @@ You can send parcels to Clever Point with your desired courier company or by you
 [![Instructions 1](https://cleverpoint.gr/wp-content/uploads/2022/01/instructions1.jpg)]
 
 == Changelog ==
+
+= 1.0.7 =
+* Weight conversion fix.
 
 = 1.0.6 =
 * Shipping class fix.

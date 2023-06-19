@@ -65,6 +65,7 @@ function clever_point_for_woocommerce_shipping_class() {
                 $cost = 0;
                 $total = WC()->cart->get_cart_contents_total();
                 $weight= WC()->cart->get_cart_contents_weight();
+                $weight = wc_get_weight($weight,'kg');
 
                 if ($weight<=2) {
                     $cost = $this->cost_up_to_2kg;
